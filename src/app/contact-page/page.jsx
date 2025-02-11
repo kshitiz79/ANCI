@@ -7,30 +7,29 @@ const iconMapping = {
   Pune: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Office building icon
   Mumbai: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Office-style building
   Bangalore: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Landmark office-like icon
-  Hyderabad: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Consistent with other office icons
+  Hyderabad: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Consistent ith other office icons
 }
 const offices = [
   {
     location: "Pune",
-    address: "South Block – 504, Sacred World, Wanowrie, Pune",
-    contact: "Contact Diksha: 96044 34846",
+    address: "Office 6, Anmol Pride, Baner-Road, Baner, Pune - 45",
+  },
+  {
+    location: "Pune",
+    address: "Office 504, Sacred World, Jagtap Chowk, Pune - 40",
   },
   {
     location: "Mumbai",
     address: "Contact Amit for more details",
-    contact: "Contact Amit: 98600 75842",
   },
   {
     location: "Bangalore",
     address: "We Work Galaxy, Residency Road, Bangalore",
-    contact: "Contact Neha: 96063 52985",
-  },
-  {
-    location: "Hyderabad",
-    address: "Contact Kabilan for assistance",
-    contact: "Contact Kabilan: 99448 59465",
   },
 ];
+
+const contactNumber = "7798931936";
+
 
 const Contact = () => {
   const handleSubmit = (e) => {
@@ -44,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen  py-16 px-4 ">
+    <div className="bg-gray-50 min-h-screen  py-12 px-4 ">
       {/* Header Section */}
       <div className="text-center mb-12 max-w-7xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-sans font-thin text-gray-800 mb-4">
@@ -74,8 +73,8 @@ const Contact = () => {
                   {office.location}
                 </h2>
                 <p className="text-gray-600 text-sm">{office.address}</p>
-                <p className="text-[#7C0c2B] text-sm font-medium">
-                  {office.contact}
+                <p className="text-[#7C0c2B] text-sm font-medium mt-1">
+                  {contactNumber}
                 </p>
               </div>
             </div>
@@ -145,7 +144,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-red-800 text-white font-semibold rounded-lg py-2 hover:bg-red-900 transition"
+                className="w-full bg-[#7c0c2b] text-white font-semibold rounded-lg py-2 hover:bg-red-900 transition"
               >
                 Submit
               </button>

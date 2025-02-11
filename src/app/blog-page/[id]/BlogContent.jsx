@@ -22,7 +22,7 @@ export default function BlogContent({ blog, blogIndex, totalBlogs }) {
           <h1 className="text-4xl font-sans font-thin text-gray-800 mb-4">{blog.title}</h1>
 
           {/* Meta Info */}
-          <div className="text-gray-600 mb-6 font-sans font-thin space-y-1">
+          <div className="text-gray-600 mb-6 font-sans font-thin space-y-1 text-justify">
             <p>
               <strong>Author:</strong> {blog.author}
             </p>
@@ -35,7 +35,7 @@ export default function BlogContent({ blog, blogIndex, totalBlogs }) {
           </div>
 
           {/* Blog Content */}
-          <div className="leading-relaxed text-gray-700">
+          <div className="leading-relaxed text-gray-700 text-justify">
             {blog.content.map((paragraph, idx) => {
               if (
                 paragraph.match(
@@ -65,7 +65,7 @@ export default function BlogContent({ blog, blogIndex, totalBlogs }) {
             className={`px-6 py-3 text-white font-semibold rounded-md transition ${
               blogIndex === 0
                 ? "bg-gray-400 cursor-not-allowed"
-                : "bg-red-800 hover:bg-red-700"
+                : "bg-[#7c0c2b] hover:bg-[#7c0c2b]"
             }`}
           >
             ⬅ Previous
@@ -78,7 +78,7 @@ export default function BlogContent({ blog, blogIndex, totalBlogs }) {
             className={`px-6 py-3 text-white font-semibold rounded-md transition ${
               blogIndex === totalBlogs - 1
                 ? "bg-gray-400 cursor-not-allowed"
-                : "bg-red-800 hover:bg-red-700"
+                : "bg-[#7c0c2b] hover:bg-[#7c0c2b]"
             }`}
           >
             Next ➡

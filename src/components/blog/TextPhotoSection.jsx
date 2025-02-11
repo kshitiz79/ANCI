@@ -19,7 +19,7 @@ export default function TextPhotoSection() {
           <h2 className="text-3xl font-sans font-thin text-gray-800">
             Shaping the Future of Workspaces
           </h2>
-          <p className="mt-4 text-gray-600 font-sans font-lg font-thin">
+          <p className="mt-4 text-gray-600 font-sans font-lg text-justify font-thin">
             Explore our insights and initiatives as we redefine the modern
             workspace. From embracing hybrid work models and resimercial design to
             integrating AI-powered solutions, we're creating environments that

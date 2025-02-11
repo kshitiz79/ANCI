@@ -24,7 +24,7 @@ const AboutUs = () => {
           </p>
           <a
             href="/about-page"
-            className="inline-block bg-red-900 text-white font-medium px-6 py-3 font-sans font-thin rounded hover:bg-red-800 transition text-left mt-2"
+            className="inline-block bg-[#7c0c2b] text-white font-medium px-6 py-3 font-sans font-thin rounded hover:bg-red-800 transition text-left mt-2"
           >
             Learn More About Our Story
           </a>

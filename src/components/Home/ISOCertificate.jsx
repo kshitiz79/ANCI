@@ -13,13 +13,13 @@ const isoCertifications = [
     id: 2,
     title: "ISO 14001: 2015",
     description: "Environment Management System",
-    image: "/iso2.png", // Replace with actual ISO logo path
+    image: "/iso2.jpg", // Replace with actual ISO logo path
   },
   {
     id: 3,
     title: "ISO 45001: 2018",
     description: "Occupational Health & Safety Management System",
-    image: "/iso3.png", // Replace with actual ISO logo path
+    image: "/iso3.jpg", // Replace with actual ISO logo path
   },
 ];
 

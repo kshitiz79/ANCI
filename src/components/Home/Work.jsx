@@ -78,7 +78,7 @@ const OurWorks = () => {
         <div className="flex justify-center mt-10">
         <a
   href="/project-page"
-  className="bg-red-800 text-white px-6 py-3 rounded-lg hover:bg-red-900 transition inline-block"
+  className="bg-[#7c0c2b] text-white px-6 py-3 rounded-lg hover:bg-red-900 transition inline-block"
 >
   View More Projects
 </a>

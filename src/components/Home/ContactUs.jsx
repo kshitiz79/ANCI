@@ -5,27 +5,27 @@ import React from "react";
 const officeLocations = [
   {
     city: "Pune",
-    address: "South Block 504, Sacred World, Wanowrie, Pune",
-    contactName: "Diksha",
-    phone: "96044 34846",
+    address: "Office 6, Anmol Pride,Baner-Road,Baner, Pune-45",
+
+    phone: "7798931936",
+  },
+  {
+    city: "Pune",
+    address: "Office 504,Sacred World,Jagtap Chowk,Pune-40",
+ 
+    phone: "7798931936",
   },
   {
     city: "Mumbai",
-    address: "Contact Amit",
-    contactName: "Amit",
-    phone: "98600 75842",
+    address: "Contact Amit for more details",
+ 
+    phone: "7798931936",
   },
   {
     city: "Bangalore",
     address: "We Work Galaxy, Residency Road, Bangalore",
-    contactName: "Neha",
-    phone: "96063 52985",
-  },
-  {
-    city: "Hyderabad",
-    address: "Contact Kabilan",
-    contactName: "Kabilan",
-    phone: "99448 59465",
+  
+    phone: "7798931936",
   },
 ];
 
@@ -58,12 +58,12 @@ const ContactUs = () => {
                 <h3 className="text-lg font-normal text-gray-700">{location.city}</h3>
                 <p className="text-gray-600 break-words">{location.address}</p>
                 <p className="text-gray-600 mt-2">
-                  <span className="font-sans font-thin">{location.contactName}:</span> {location.phone}
+                  <span className="font-sans font-thin">{location.contactName}</span> {location.phone}
                 </p>
                 <div className="mt-4 flex flex-wrap justify-center space-x-4">
                   <a
                     href={`tel:${location.phone}`}
-                    className="bg-red-900 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-950 transition"
+                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md hover:bg-red-900 transition"
                   >
                     Call
                   </a>
@@ -71,7 +71,7 @@ const ContactUs = () => {
                     href={`https://wa.me/${location.phone.replace(/\s+/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-red-800 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-600 transition"
+                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md  transition"
                   >
                     Message
                   </a>
@@ -90,12 +90,12 @@ const ContactUs = () => {
                 <h3 className="text-lg  font-normal text-gray-700">{location.city}</h3>
                 <p className="text-gray-600 break-words">{location.address}</p>
                 <p className="text-gray-600 mt-2">
-                  <span className="font-sans font-thin">{location.contactName}:</span> {location.phone}
+                  <span className="font-sans font-thin">{location.contactName}</span> {location.phone}
                 </p>
                 <div className="mt-4 flex flex-wrap justify-center space-x-4">
                   <a
                     href={`tel:${location.phone}`}
-                    className="bg-red-900 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-950 transition"
+                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md hover:bg-red-900 transition"
                   >
                     Call
                   </a>
@@ -103,7 +103,7 @@ const ContactUs = () => {
                     href={`https://wa.me/${location.phone.replace(/\s+/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-red-800 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-600 transition"
+                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md transition"
                   >
                     Message
                   </a>

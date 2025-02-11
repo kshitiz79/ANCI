@@ -4,27 +4,27 @@ import React, { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-
   {
-    value: "2+",
     numericValue: 2, // Used for animation
-    label: "Decades of Experience",
-  },
-  
-
-  {
-    value: "54+",
-    numericValue: 54, // Used for animation
-    label: "Projects Completed",
+    label: "Experience",
+    suffix: "+ Decade ",
   },
   {
-    value: "2M+",
-    numericValue: 2000000, // Used for animation
-    label: "Sqft of Projects",
+    numericValue: 54,
+    label: "Projects",
+    suffix: "+",
+  },
+  {
+    numericValue: 2000000,
+    label: "Sqft of Work",
+    suffix: " Million",
+    format: (num) => (num / 1000000), // Convert to Million
   },
 ];
 
-const AnimatedCounter = ({ finalValue, displayValue }) => {
+
+
+const AnimatedCounter = ({ finalValue, suffix = "", format }) => {
   const [count, setCount] = useState(0);
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -32,29 +32,29 @@ const AnimatedCounter = ({ finalValue, displayValue }) => {
   useEffect(() => {
     if (isInView) {
       let start = 0;
-      const duration = 2000; // Animation duration in ms
-      const increment = Math.ceil(finalValue / (duration / 50));
+      const duration = 2000;
+      const increment = finalValue / (duration / 10);
 
-      const counter = setInterval(() => {
+      const interval = setInterval(() => {
         start += increment;
         if (start >= finalValue) {
+          clearInterval(interval);
           setCount(finalValue);
-          clearInterval(counter);
         } else {
           setCount(start);
         }
-      }, 50);
+      }, 10);
     }
   }, [isInView, finalValue]);
 
   return (
-    <span ref={ref}>
-      {finalValue >= 1000000
-        ? `${Math.round(count / 1000000)}M+`
-        : `${count}+`}
-    </span>
+    <motion.div ref={ref}>
+      {format ? format(count) : Math.round(count)}
+      {suffix}
+    </motion.div>
   );
 };
+
 
 const OurAchievements = () => {
   return (
@@ -78,16 +78,18 @@ const OurAchievements = () => {
               className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center"
             >
               <motion.span
-                className="text-4xl font-medium text-red-800 mb-2"
+                className="text-4xl font-medium text-gray-700 mb-2"
                 animate={{
                   scale: [1, 1.02, 1],
                   transition: { duration: 1, repeat: Infinity },
                 }}
               >
                 <AnimatedCounter
-                  finalValue={stat.numericValue}
-                  displayValue={stat.value}
-                />
+    key={index}
+    finalValue={stat.numericValue}
+    suffix={stat.suffix}
+    format={stat.format}
+  />
               </motion.span>
               <p className="text-gray-600">{stat.label}</p>
             </motion.div>

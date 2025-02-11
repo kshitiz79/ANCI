@@ -46,7 +46,7 @@ const ProfileCards = () => {
               <h2 className="text-lg font-semibold text-gray-800 mb-1">
                 {profile.name}
               </h2>
-              <p className="text-xs font-medium text-indigo-500 mb-2">
+              <p className="text-xs font-medium  text-indigo-500 mb-2">
                 {profile.position}
               </p>
               {/* <p className="text-xs text-gray-600 mb-1">
@@ -59,8 +59,8 @@ const ProfileCards = () => {
 
 
             </div>
-              <p className="text-sm text-gray-600 mt-5">
-                <strong>About me:</strong> {profile.about}
+              <p className="text-sm text-gray-600 text-justify mt-5">
+                 {profile.about}
               </p>
             </div>
           </div>

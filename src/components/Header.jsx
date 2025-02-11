@@ -1,18 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  // Close the menu when the route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header className="bg-[#7c0c2b] shadow sticky top-0 z-50 py-2">
-      <div className="max-w-[1340px] mx-auto flex items-center justify-between  ">
+      <div className="max-w-[1340px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <Link href="/">
@@ -49,7 +56,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <button onClick={toggleMenu} className="text-white focus:outline-none mr-5">
             <svg
               className="w-6 h-6"
               fill="none"

@@ -13,10 +13,12 @@ const page = () => {
   return (
     <div>
     <WhoWeAreSection/>
+    <ProfileCards/>
     <OurWorksSection/>
 
-    <ProfileCards/>
+
     <OurAchievements/>
+  
     </div>
   )
 }

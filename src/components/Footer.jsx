@@ -9,23 +9,15 @@ const Footer = () => {
       {/* Top Bar with ISO Certifications */}
      
 
-      {/* Main Footer Content */}
-      <div className="py-10 bg-[#7c0c2b]">
-        <div className="max-w-7xl mx-auto ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            {/* Left: Logo & Social Media */}
-            <div className="flex flex-col items-center md:items-start">
-              <img
-                src="/flogo.png"
-                alt="ANCI Fitouts Logo"
-                className="w-40 mb-6"
-              />
-              <div className="flex space-x-6 lg:ml-2 ">
+
+<div className="bg-red-50 py-4">
+
+<div className="flex  items-center justify-center  space-x-6 lg:ml-2 ">
                 <a
                   href="https://www.facebook.com/www.anci.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-400 transition"
+                  className="hover:text-gray-400 text-[#7c0c2b] transition"
                   aria-label="Facebook"
                 >
                   <FaFacebook className="w-5 h-5" />
@@ -34,7 +26,7 @@ const Footer = () => {
                   href="https://www.instagram.com/ancifitouts/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-400 transition"
+                  className="hover:text-gray-400 text-[#7c0c2b] transition"
                   aria-label="Instagram"
                 >
                   <FaInstagram className="w-5 h-5" />
@@ -43,7 +35,7 @@ const Footer = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-400 transition"
+                  className="hover:text-gray-400 text-[#7c0c2b] transition"
                   aria-label="Twitter"
                 >
                   <FaTwitter className="w-5 h-5" />
@@ -52,29 +44,51 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/anci0909/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-400 transition"
+                  className="hover:text-gray-400 text-[#7c0c2b] transition"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin className="w-5 h-5" />
                 </a>
-              </div>
+              </div> 
+
+</div>
+
+
+
+      {/* Main Footer Content */}
+      <div className="py-5 bg-[#7c0c2b]">
+        <div className="max-w-7xl mx-auto ">
+          <div className="  gap-10  items-center">
+            {/* Left: Logo & Social Media */}
+            <div className=" items-center md:items-start flex justify-between flex-col md:flex-row text-xs md:text-lg gap-2">
+
+
+            <div className="text-center md:text-left ">
+
+<h1>Mumbai | Pune | Bangalore | Hyderabad | Gurgaon | Delhi NCR
+   </h1>
+</div>
+
+
+
+<h1>&copy;  A.N.C.I 2025</h1> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+              {/* */}
             </div>
 
-            {/* Right: Address & Contact */}
-            <div className="flex flex-col items-center md:items-end">
-              <h3 className="font-sans font-thin text-2xl mb-2">Contact Address</h3>
-              <p className="text-center md:text-right font-sans font-thin text-sm leading-relaxed">
-                South Block – 504 <br />
-                Sacred World, Wanowrie <br />
-                Pune 111045
-              </p>
-              <a
-                href="tel:9604434846"
-                className="flex items-center mt-3 text-white hover:underline"
-              >
-                <span className="mr-2 text-lg">📞</span> 96044 34846
-              </a>
-            </div>
+         
           </div>
         </div>
       </div>
