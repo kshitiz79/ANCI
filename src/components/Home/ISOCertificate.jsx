@@ -25,7 +25,7 @@ const isoCertifications = [
 
 const ISOCertifications = () => {
   return (
-    <section className="bg-gray-100 py-10 px-4">
+    <section className="bg-gray-50 py-10 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-sans font-thin text-center text-gray-800 mb-8">
           Our ISO Certifications

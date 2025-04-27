@@ -87,7 +87,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-gradient-to-r bg-gray-100 py-16 px-6" id="why-choose-us">
+    <section className="bg-gradient-to-r bg-gray-50 py-16 px-6" id="why-choose-us">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}

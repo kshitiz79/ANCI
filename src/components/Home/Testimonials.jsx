@@ -155,7 +155,7 @@ const ClientFeedback = ({ data }) => (
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-100  md:py-0 sm:py-12">
+    <section className="bg-gray-50  md:py-0 sm:py-12">
       <div className="max-w-8xl mx-auto ">
         <h1 className="text-center text-2xl sm:text-3xl font-sans font-thin text-gray-800 lg:mb-3 sm:mb-10">
           Client Testimonials

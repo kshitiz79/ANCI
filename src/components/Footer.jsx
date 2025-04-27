@@ -10,7 +10,7 @@ const Footer = () => {
      
 
 
-<div className="bg-red-50 py-4">
+<div className="bg-[#fbf9f8] py-4">
 
 <div className="flex  items-center justify-center  space-x-6 lg:ml-2 ">
                 <a
@@ -94,25 +94,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Bar */}
-      <div className="bg-gray-800 py-4">
-        <div className="max-w-7xl mx-auto font-sans flex flex-col items-center space-y-2 text-sm md:flex-row md:justify-between md:space-y-0 ">
-          <p className="text-center font-sans md:text-left">
-            &copy; {new Date().getFullYear()} ANCI FITOUTS LLP. All rights
-            reserved.
-          </p>
-          <p className="text-center md:text-right font-sans">
-            Powered by{" "}
-            <a
-              href="https://rbshstudio.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-blue-500 hover:underline"
-            >
-              RBSH Studio
-            </a>
-          </p>
-        </div>
-      </div>
+     
     </footer>
   );
 };

@@ -7,14 +7,23 @@ const projects = [
 
   {
     title: "JWS Energy Ltd",
-   
+   area: "15000 Sqft",
+   location: "Talegaon Pune",
     scope: "Design & Build",
     image: "/JSWEnergyLtd/JWSE.jpeg",
-  },{
+  },
+  
+  
+  
+  {
     title: "JWS Mobility Ltd",
-    
+    area: "10000 Sqft",
+    location: "Talegaon Pune",
     image: "/JSWMobilityLtd/JWSMOBILE2.png",
-  },{
+  },
+  
+  
+  {
     title: "AIL",
     area: "50,000 Sqft / 60 days",
     location: "Pune",
@@ -35,13 +44,7 @@ const projects = [
 
 
 
-  {
-    title: "Marigold",
-    area: "50,000 Sqft / 60 days",
-    location: "Pune",
-    scope: "Design & Build",
-    image: "/Project/project1.png",
-  },
+
   {
     title: "Pent House",
     area: "6,000 Sqft / 8 months",
@@ -56,13 +59,7 @@ const projects = [
     scope: "Design & Build",
     image: "/Project/project16.jpg",
   },
-  {
-    title: "Bungalow",
-    area: "4,500 Sqft / 2 years",
-    location: "Pune",
-    scope: "Turnkey Contracting",
-    image: "/Project/project13.jpg",
-  },
+
   {
     title: "EFC Business Centre",
     area: "50,000 Sqft / 60 days",
@@ -121,7 +118,7 @@ const projects = [
   },
   {
     title: "Kohler",
-    area: "Not Available",
+
     location: "Pune",
     scope: "Design & Build",
     image: "/Project/project8.png",
@@ -147,13 +144,13 @@ const projects = [
     scope: "Design & Build",
     image: "/Project/project2.png",
   },
-  {
-    title: "The Bombay Store",
-    area: "2,000 Sqft / 18 days",
-    location: "Ishanya Mall, Pune",
-    scope: "Turnkey Contractor",
-    image: "/about.jpg",
-  },
+  // {
+  //   title: "The Bombay Store",
+  //   area: "2,000 Sqft / 18 days",
+  //   location: "Ishanya Mall, Pune",
+  //   scope: "Turnkey Contractor",
+  //   image: "/about.jpg",
+  // },
   {
     title: "BMC Office",
     area: "10,000 Sqft",
@@ -161,13 +158,7 @@ const projects = [
     scope: "Design & Build",
     image: "/Project/project6.png",
   },
-  {
-    title: "PhonePe Cafeteria",
-    area: "Not Available",
-    location: "Pune",
-    scope: "Design & Build",
-    image: "/Project/project9.png",
-  },
+
   {
     title: "Nidan Centre",
     area: "7,500 Sqft",

@@ -2,7 +2,7 @@ import React from "react";
 
 const WhoWeAreSection = () => {
   return (
-    <section className="bg-gray-100 py-12  px-6 font-sans font-thin">
+    <section className="bg-gray-50 py-12  px-6 font-sans font-thin">
       <div className="max-w-7xl mx-auto">
         {/* Who We Are Section */}
         <div className="grid lg:grid-cols-2 gap-12 text-justify items-center mb-20 mt-10">

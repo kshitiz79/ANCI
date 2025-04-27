@@ -71,7 +71,7 @@ const OurExpertise = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section className="bg-gray-100 py-12 px-6 font-sans font-thin">
+    <section className="bg-gray-50 py-12 px-6 font-sans font-thin">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl text-gray-800 mb-6">Asset Class Expertise</h2>
         <p className="text-lg text-gray-600 mb-8">

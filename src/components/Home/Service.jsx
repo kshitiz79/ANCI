@@ -36,7 +36,7 @@ const OurServices = () => {
   const repeatedServices = [...services, ...services];
 
   return (
-    <section className="bg-gray-100 py-12 overflow-hidden font-sans font-thin">
+    <section className="bg-gray-50 py-12 overflow-hidden font-sans font-thin">
       <div className="max-w-7xl mx-auto text-center mb-8">
         <h2 className="text-3xl text-gray-800">
           Comprehensive Solutions for Every Space

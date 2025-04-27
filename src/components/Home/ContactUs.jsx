@@ -24,14 +24,14 @@ const officeLocations = [
   {
     city: "Bangalore",
     address: "We Work Galaxy, Residency Road, Bangalore",
-  
+   
     phone: "7798931936",
   },
 ];
 
 const ContactUs = () => {
   return (
-    <section className="bg-gray-100 py-12 px-4 sm:px-6">
+    <section className="bg-gray-50 py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Headline */}
         <h2 className="text-3xl font-sans font-thin text-gray-800 text-center mb-8">
@@ -63,15 +63,15 @@ const ContactUs = () => {
                 <div className="mt-4 flex flex-wrap justify-center space-x-4">
                   <a
                     href={`tel:${location.phone}`}
-                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md hover:bg-red-900 transition"
+                    className="bg-gray-400  text-white px-4 py-2 rounded-md shadow-md hover:bg-red-900 transition"
                   >
                     Call
                   </a>
                   <a
-                    href={`https://wa.me/${location.phone.replace(/\s+/g, "")}`}
+                  href ="mail:to=chetan@anic.in " 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md  transition"
+                    className="bg-gray-400  text-white px-4 py-2 rounded-md shadow-md  transition"
                   >
                     Message
                   </a>
@@ -95,7 +95,7 @@ const ContactUs = () => {
                 <div className="mt-4 flex flex-wrap justify-center space-x-4">
                   <a
                     href={`tel:${location.phone}`}
-                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md hover:bg-red-900 transition"
+                    className="bg-gray-400  text-white px-4 py-2 rounded-md shadow-md hover:bg-slate-500 transition"
                   >
                     Call
                   </a>
@@ -103,7 +103,7 @@ const ContactUs = () => {
                     href={`https://wa.me/${location.phone.replace(/\s+/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#7c0c2b]  text-white px-4 py-2 rounded-md shadow-md transition"
+                    className="bg-gray-400  text-white px-4 py-2 rounded-md shadow-md transition"
                   >
                     Message
                   </a>

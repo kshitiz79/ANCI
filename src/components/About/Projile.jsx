@@ -1,15 +1,8 @@
 import React from "react";
 
 const profiles = [
-  {
-    name: "SAWAN R YEDE",
-    position: "DIRECTOR – STRATEGIES & COLLABORATIONS",
-    image: "/about/profile2.png",
-    email: "sawan@example.com",
-    location: "Pune, Maharashtra, India",
-    about:
-      "Experienced and results-driven leader with over a decade in the real estate industry, adept at implementing strategic initiatives to optimize business processes and enhance overall efficiency. Sawan is a certified professional in PPP®, CSSYB®, CCMP® and MSP®. He holds an MBA in Operations Management, a post-graduation in Urban Planning and Management, and an Executive Management Development Programme from IIM Kozhikode.",
-  },
+
+
   {
     name: "ADITYA RATHOD",
     position: "FOUNDER & MANAGING DIRECTOR",
@@ -19,11 +12,22 @@ const profiles = [
     about:
       "ANCI was founded by Aditya Rathod in 2006 & headquartered in Pune (Maharashtra, India). Aditya is a veteran with over two decades of experience in the Indian Real Estate industry. Known for his valuable insights, he has helped various companies with portfolio planning, strategic consulting, expansion/relocations & project delivery. Aditya’s core strengths lie in offering turnkey solutions encompassing Design & Build, Contracting, and Interior Fit-Outs, ensuring seamless execution and exceptional results for Clients..",
   },
+
+  {
+    name: "SAWAN R YEDE",
+    position: "DIRECTOR – STRATEGIES & COLLABORATIONS",
+    image: "/about/profile2.png",
+    email: "sawan@example.com",
+    location: "Pune, Maharashtra, India",
+    about:
+      "Experienced and results-driven leader with over a decade in the real estate industry, adept at implementing strategic initiatives to optimize business processes and enhance overall efficiency. Sawan is a certified professional in PPP®, CSSYB®, CCMP® and MSP®. He holds an MBA in Operations Management, a post-graduation in Urban Planning and Management, and an Executive Management Development Programme from IIM Kozhikode.",
+  },
+  
 ];
 
 const ProfileCards = () => {
   return (
-    <div className="w-full bg-gray-100 py-8 flex justify-center">
+    <div className="w-full bg-gray-50  py-8 flex justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-7xl ">
         {profiles.map((profile, index) => (
           <div
@@ -46,7 +50,7 @@ const ProfileCards = () => {
               <h2 className="text-lg font-semibold text-gray-800 mb-1">
                 {profile.name}
               </h2>
-              <p className="text-xs font-medium  text-indigo-500 mb-2">
+              <p className="text-xs font-medium  text-zinc-500 mb-2">
                 {profile.position}
               </p>
               {/* <p className="text-xs text-gray-600 mb-1">

@@ -1,14 +1,17 @@
 "use client";
 
-import React from "react";
-import { FaBuilding, FaRegBuilding, FaLandmark } from "react-icons/fa";
+import React, { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import emailjs from "@emailjs/browser";
+import { FaBuilding } from "react-icons/fa";
 
 const iconMapping = {
-  Pune: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Office building icon
-  Mumbai: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Office-style building
-  Bangalore: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Landmark office-like icon
-  Hyderabad: <FaBuilding className="text-[#7C0c2B] text-6xl" />, // Consistent ith other office icons
-}
+  Pune: <FaBuilding className="text-zinc-500 text-6xl" />,
+  Mumbai: <FaBuilding className="text-zinc-500 text-6xl" />,
+  Bangalore: <FaBuilding className="text-zinc-500 text-6xl" />,
+  Hyderabad: <FaBuilding className="text-zinc-500 text-6xl" />,
+};
+
 const offices = [
   {
     location: "Pune",
@@ -20,30 +23,64 @@ const offices = [
   },
   {
     location: "Mumbai",
-    address: "Contact Amit for more details",
+    address: "",
   },
   {
-    location: "Bangalore",
-    address: "We Work Galaxy, Residency Road, Bangalore",
+    location: "Hydrabad",
+    address: "",
   },
 ];
 
 const contactNumber = "7798931936";
 
-
 const Contact = () => {
-  const handleSubmit = (e) => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(false);
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
+    setLoading(true);
 
-    const formDetails = Object.fromEntries(formData.entries());
-    console.log("Form Submitted:", formDetails);
+    // Replace these with your EmailJS details
+    const serviceID = "service_ei9yfzf";
+    const templateID = "template_ggvk4vf";
+    const publicKey = "uE3OSSvhO9A9hdwQK";
 
-    // Add API call or EmailJS logic here
+    emailjs
+      .sendForm(serviceID, templateID, form.current, publicKey)
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          setLoading(false);
+          setPopupVisible(true);
+          form.current.reset();
+        },
+        (error) => {
+          console.error("Failed to send email:", error.text);
+          setLoading(false);
+        }
+      );
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen  py-12 px-4 ">
+    <div className="bg-gray-50 min-h-screen py-12 px-4 relative">
+      {/* Popup Overlay */}
+      {popupVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center">
+            <h2 className="text-2xl mb-4">Email Sent!</h2>
+            <p className="mb-6">Thank you for reaching out to us. We will get back to you soon.</p>
+            <button
+              onClick={() => setPopupVisible(false)}
+              className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-[#7c0c2b] transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Header Section */}
       <div className="text-center mb-12 max-w-7xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-sans font-thin text-gray-800 mb-4">
@@ -55,7 +92,7 @@ const Contact = () => {
       </div>
 
       {/* Layout with Offices and Contact Form */}
-      <div className="flex flex-col lg:flex-row gap-8  justify-between max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row gap-8 justify-between max-w-7xl mx-auto">
         {/* Office Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full lg:w-1/2">
           {offices.map((office, index) => (
@@ -65,15 +102,15 @@ const Contact = () => {
             >
               <div className="flex justify-center items-center w-full h-32">
                 {iconMapping[office.location] || (
-                  <FaBuilding className="text-[#7C0c2B] text-6xl" />
+                  <FaBuilding className="text-zinc-500 text-6xl" />
                 )}
               </div>
               <div className="p-6">
-                <h2 className="text-base font-sans  font-thin text-gray-800 mb-2">
+                <h2 className="text-base font-sans font-thin text-gray-800 mb-2">
                   {office.location}
                 </h2>
                 <p className="text-gray-600 text-sm">{office.address}</p>
-                <p className="text-[#7C0c2B] text-sm font-medium mt-1">
+                <p className="text-gray-900 text-sm font-medium mt-1">
                   {contactNumber}
                 </p>
               </div>
@@ -87,16 +124,17 @@ const Contact = () => {
             <h2 className="text-2xl font-sans font-thin text-gray-800 mb-4">
               Contact Us
             </h2>
-            <form className="space-y-4" onSubmit={handleSubmit}>
+            <form ref={form} className="space-y-4" onSubmit={sendEmail}>
               <div>
                 <label className="block text-gray-700 font-medium mb-1">
                   Name
                 </label>
                 <input
                   type="text"
-                  name="name"
+                  name="from_name"
                   placeholder="Enter your name"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-900"
+                  required
                 />
               </div>
               <div>
@@ -105,9 +143,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  name="company"
+                  name="from_company"
                   placeholder="Enter your company name"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-900"
+                  required
                 />
               </div>
               <div>
@@ -116,9 +155,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  name="email"
+                  name="from_email"
                   placeholder="Enter your company email"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-900"
+                  required
                 />
               </div>
               <div>
@@ -127,9 +167,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="tel"
-                  name="phone"
+                  name="from_phone"
                   placeholder="Enter your phone number"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-red-900"
+                  required
                 />
               </div>
               <div>
@@ -137,16 +178,18 @@ const Contact = () => {
                   Description
                 </label>
                 <textarea
-                  name="description"
+                  name="from_description"
                   placeholder="Describe your requirements or questions"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 h-24 focus:ring-2 focus:ring-red-900"
+                  required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#7c0c2b] text-white font-semibold rounded-lg py-2 hover:bg-red-900 transition"
+                disabled={loading}
+                className="w-full bg-gray-400 text-white font-semibold rounded-lg py-2 hover:bg-[#7c0c2b] transition"
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
             </form>
           </div>
@@ -157,3 +200,16 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+// service_ei9yfzf
+// service ID
+
+
+// template_ggvk4vf templateid
+
+
+// publick key
+
+// uE3OSSvhO9A9hdwQK

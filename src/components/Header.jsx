@@ -49,6 +49,9 @@ export default function Header() {
           <Link href="/blog-page" className="hover:text-blue-500 transition">
             Blogs
           </Link>
+          <Link href="/career-page" className="hover:text-blue-500 transition">
+            Career
+          </Link>
           <Link href="/contact-page" className="hover:text-blue-500 transition">
             Contact Us
           </Link>

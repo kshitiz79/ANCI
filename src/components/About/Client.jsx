@@ -8,6 +8,7 @@ const OurWorksSection = () => {
     { src: "/client/client4.png", alt: "Logo 2" },
     { src: "/client/client18.png", alt: "Logo 2" },
     { src: "/client/client11.png", alt: "Logo 2" },
+    
     { src: "/client/client1.png", alt: "Logo 1" },
     { src: "/client/client2.png", alt: "Logo 2" },
     { src: "/client/client3.png", alt: "Logo 2" },
@@ -29,18 +30,18 @@ const OurWorksSection = () => {
   ];
 
   return (
-    <section className="bg-gray-100 py-12 px-6">
+    <section className="bg-gray-50 py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl text-gray-800 font-sans font-thin text-center mb-12">
           Our Clients
         </h2>
 
         {/* First Row - 5 Logos */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
           {logos.slice(0, 5).map((logo, index) => (
             <div
               key={index}
-              className="w-full h-36 lg:h-32 bg-white shadow-lg rounded-lg flex items-center justify-center"
+              className="lg:w-full w-60 mx-auto h-36  lg:h-32 bg-white shadow-lg rounded-lg flex items-center justify-center"
             >
               <img
                 src={logo.src}

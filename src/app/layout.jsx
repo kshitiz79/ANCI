@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ["100", "400", "900"
 
 
 export const metadata = {
-  title: "A.N.C.I",
+  title: "Home - Seamless Office Interiors: Any Scale, On Time, Every Time | A.N.C.I.",
   icons: {
     icon: "/favicon.svg",
   },

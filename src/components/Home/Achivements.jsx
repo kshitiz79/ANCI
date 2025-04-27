@@ -58,7 +58,7 @@ const AnimatedCounter = ({ finalValue, suffix = "", format }) => {
 
 const OurAchievements = () => {
   return (
-    <section className="bg-gray-100 py-12 px-6">
+    <section className="bg-gray-50 py-12 px-6">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
